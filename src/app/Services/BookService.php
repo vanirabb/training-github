@@ -10,11 +10,10 @@ class BookService {
     function save ($attributes)
     {
         DB::table('books')->insert([
-            'books' =>
-            'author' =>
-            'review' =>
-            'created_at' =>
-        ])
+            'book' =>$attributes["book"],
+            'author' =>$attributes["author"],
+            'review' =>$attributes["review"]
+        ]);
     }
 
 }

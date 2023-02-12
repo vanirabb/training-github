@@ -8,19 +8,19 @@ use App\Http\Services\BookService;
 
 class BookController extends Controller {
 
-    function __constructor (
+    public function __constructor (
         BookService $book_service
     )
     {
-        $this->book_serivice = $book_service;
+        $this->book_service = $book_service;
     }
 
-    function index ()
+    public function index ()
     {
         return view('book.review');
     }
 
-    function store(Request $request)
+    public function store(Request $request)
     {
         // get request data
         $attributes = $request->except('_token');
