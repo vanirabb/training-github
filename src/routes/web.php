@@ -14,5 +14,9 @@ use App\Http\Controllers\BookController;
 |
 */
 
+/* if you click homeURL ,"new"function defined in bookcontroller  is called.
+   This route is named "book_new".
+*/
 Route::get('/', [BookController::class, 'new'])->name('book_new');
 Route::post('/book/store', [BookController::class, 'store'])->name('book_store');
+Route::get('/book/list',[BookController::class,'list'])->name('book_list');

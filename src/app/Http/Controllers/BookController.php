@@ -29,4 +29,9 @@ class BookController extends Controller {
         // redirect page
         return redirect()->route('book_new');
     }
+
+    public function list()
+    {
+        return view('book.list');
+    }
 }
